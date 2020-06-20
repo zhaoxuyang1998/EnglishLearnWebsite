@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.neuedu.mapper.WordMapper">
+
+    <insert id="saveBatch" parameterType="java.util.List">
+      insert into word(vocab_id,vocab_name,spell,phonetic,paraphrase,sentence)
+      values
+      <foreach collection="list" item="word" index="index" separator=",">
+          (
+          #{word.vocabId},#{word.vocabName},#{word.spell},#{word.phonetic},#{word.paraphrase},#{word.sentence}
+          )
+      </foreach>
+    </insert>
+
+
+
+</mapper>
