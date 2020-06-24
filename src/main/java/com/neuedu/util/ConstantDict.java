@@ -10,5 +10,9 @@ public class ConstantDict {
     public static Integer FAV_WORD_TYPE_NUM=1;
     public static Integer FAV_ARTICLE_TYPE_NUM=2;
 
+    //123456
+
+
+
 
 }
